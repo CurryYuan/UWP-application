@@ -1,0 +1,39 @@
+﻿<Page
+    x:Class="App4.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App4"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <local:MusicConverter x:Key="cvt"/>
+    </Page.Resources>
+    <StackPanel>
+        <Ellipse x:Name="ellipse" Width="400" Height="400" RenderTransformOrigin="0.5,0.5">
+            <Ellipse.RenderTransform>
+                <CompositeTransform/>
+            </Ellipse.RenderTransform>
+            <Ellipse.Resources>
+                <!--Storyboard是一个动画容器-->
+                <Storyboard x:Name="EllStoryboard" RepeatBehavior="Forever">
+                    <DoubleAnimation Duration="0:0:20" To="360" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="ellipse"/>
+                </Storyboard>
+            </Ellipse.Resources>
+            <!--这是用一张图片来填充这个椭圆形-->
+            <Ellipse.Fill>
+                <ImageBrush x:Name="picture" ImageSource="Assets/backImage.jpg" />
+            </Ellipse.Fill>
+        </Ellipse>
+        <MediaElement x:Name="player" Width="600" Height="400" Stretch="Fill" AutoPlay="False" PosterSource="Assets/backImage.jpg" IsDoubleTapEnabled="True" DoubleTapped="player_DoubleTapped" MediaOpened="player_MediaOpened" Visibility="Collapsed"/>
+        <Slider x:Name="slider" Value="{Binding ElementName=player, Path=Position, Converter={StaticResource cvt},Mode=TwoWay}" />
+        <StackPanel Orientation="Horizontal">
+            <AppBarButton x:Name="play" Icon="Play" Click="play_Click"/>
+            <AppBarButton x:Name="pause" Icon="Pause" Click="pause_Click"/>
+            <AppBarButton x:Name="stop" Icon="Stop" Click="stop_Click"/>
+            <AppBarButton x:Name="pick" Icon="OpenFile" Click="pick_Click"/>
+            <AppBarButton x:Name="fullWindow" Icon="FullScreen" Click="fullWindow_Click"/>
+        </StackPanel>
+
+    </StackPanel>
+</Page>
