@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.1.5" orientation="orthogonal" renderorder="right-down" width="24" height="16" tilewidth="32" tileheight="32" infinite="0" nextobjectid="1">
+ <tileset firstgid="1" source="魔兽世界地图图块.tsx"/>
+ <layer name="块层 1" width="24" height="16">
+  <data encoding="base64" compression="zlib">
+   eJx108dKBEEQxvF5A8NhdQ+uvsYawHQ3YsSIESNGjBgxYsSIEV0VI0aM7+Z/Dw1Fbc3hR/HNoaur6Al7npeODGQiC3GIRwISsY4NbGILNShAIYpQbOQSlCIbOchFHvIRQBKSEcQu9rAvepWhHBWoNHIVqhE27p+CEFKRhmOc4FT0is5QizrUG7kBjT731/u5RARXolcTmtGCViO3od04K9HYzx3u8SB6daATXeg2cg96jbOCxn5e8Io30asP/RjAoJGHMKzu7qqeydWA6DWCUYxh3MgTmFR3d1XP5Kp8p1OYxgxmjTyHebUHV+V+5JnynS5gEUtYNvIKVsU9/XYiz5TvdE311jn6H26Le/rtRJ4p3+mO6q3zAQ5Vv5BxB3dm9Lt8p0eqt85nOPdi/3t37oaxe/lOL9Q8Ol/jxov9791sez67d/VWzaPzI5682P/ezXbi2bt39VnNo/M7PrzY/97NFlHf3N1c/cQXvvFj5F/84R/VLKqw
+  </data>
+ </layer>
+</map>
